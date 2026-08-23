@@ -65,10 +65,14 @@ export type Collection = {
   id: string;
   creator_id: string | null;
   name: string;
+  slug: string;
+  slug: string;
   description: string | null;
   cover_image_url: string | null;
   is_public: boolean;
+  creators?: Creator;
   item_count: number;
+  creators?: Creator;
 };
 
 export type Review = {
@@ -78,5 +82,19 @@ export type Review = {
   rating: number;
   comment: string | null;
   created_at: string;
+
+export type Favorite = {
+  id: string;
+  user_id: string;
+  design_id: string;
+  created_at: string;
+};
   creators?: Creator;
+};
+
+export type Favorite = {
+  id: string;
+  user_id: string;
+  design_id: string;
+  created_at: string;
 };
